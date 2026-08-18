@@ -225,6 +225,8 @@ public class ShapeCalculator {
         shape.displayData(true);
         shape.displayData("Prefix");
 
-
+        Rectangle rectangle = new Rectangle("Test", "Green", 8.5, 3.2);
+        System.out.println("Area (non-scaled): " + rectangle.calculateArea());
+        System.out.println("Area (scaled): " + rectangle.calculateArea(2.0));
     }
 }
