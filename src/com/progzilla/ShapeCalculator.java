@@ -57,7 +57,7 @@ public class ShapeCalculator {
 
     }
 
-    // Derived class
+    // Derived class - Rectangle
     static class Rectangle extends Shape {
 
         private double width;
@@ -108,6 +108,39 @@ public class ShapeCalculator {
         public double calculateArea(double scale){
             return calculateArea() * scale;
         }
+    }
 
+    // Derived class - Circle
+    static class Circle extends Shape{
+        private double radius;
+
+        public Circle(String name, String color, double radius){
+            super(name, color);
+            this.radius = radius;
+            this.type = "Circle";
+        }
+
+        public double getRadius(){
+            return radius;
+        }
+
+        public void setRadius(double radius){
+            if (radius > 0){
+                this.radius = radius;
+            }else{
+                System.out.println("Radius value must be positive");
+            }
+        }
+
+        @Override
+        public double calculateArea(){
+            return Math.PI * radius * radius;
+        }
+
+        @Override
+        public void displayData(){
+            super.displayData();
+            System.out.printf(" Radius: %.2f, Afrea: %.2f%n", radius, calculateArea());
+        }
     }
 }
