@@ -192,5 +192,13 @@ public class ShapeCalculator {
 
         System.out.println("Circle: ");
         circObject.displayData();
+
+        Shape shapeObject1 = new Rectangle("Rect", "Pink", 4.0, 2.8);
+        Shape shapeObject2 = new Circle("Circlo", "Blue", 2.3);
+
+        System.out.printf("Rectangle Area: %.2f%n", shapeObject1.calculateArea());
+        System.out.printf("Circle Area: %.2f%n", shapeObject2.calculateArea());
+
+
     }
 }
