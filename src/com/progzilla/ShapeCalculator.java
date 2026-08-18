@@ -1,5 +1,10 @@
 package com.progzilla;
 
+import org.w3c.dom.css.Rect;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class ShapeCalculator {
 
     // Parent Class
@@ -166,6 +171,26 @@ public class ShapeCalculator {
             }
             return sum;
         }
+    }
 
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("*** Shape Calculator ***\n");
+
+        Rectangle rectObject = new Rectangle("Rectangle", "Green", 3.0, 8.9);
+        Circle circObject = new Circle("Circle", "Red", 3.5);
+
+        System.out.println("Rectangle Width: " + rectObject.getWidth());
+        System.out.println("Circle Radius: " + circObject.getRadius());
+
+        rectObject.setWidth(-5);
+        rectObject.setWidth(20);
+
+        System.out.println("Rectangle: ");
+        rectObject.displayData();
+
+        System.out.println("Circle: ");
+        circObject.displayData();
     }
 }
