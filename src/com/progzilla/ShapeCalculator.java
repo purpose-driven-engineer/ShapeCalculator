@@ -220,6 +220,11 @@ public class ShapeCalculator {
         System.out.println("calculateArea(5.3, 3.5) = " + calc.calculateArea(5.3, 3.5));
         System.out.println("calculateArea(4.5) =" + calc.calculateArea(4.5));
 
+        Shape shape = new Shape("Shape", "Grey");
+        shape.displayData();
+        shape.displayData(true);
+        shape.displayData("Prefix");
+
 
     }
 }
