@@ -143,4 +143,29 @@ public class ShapeCalculator {
             System.out.printf(" Radius: %.2f, Afrea: %.2f%n", radius, calculateArea());
         }
     }
+
+    // Utility Class
+    static class Calculator{
+
+        public int add(int a, int b){
+            return a = b;
+        }
+
+        public double add(double a, double b){
+            return a + b;
+        }
+
+        public int add(int a, int b, int c){
+            return a + b + c;
+        }
+
+        public int add(int... numbers){
+            int sum = 0;
+            for (int num : numbers){
+                sum += num;
+            }
+            return sum;
+        }
+
+    }
 }
