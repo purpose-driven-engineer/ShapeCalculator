@@ -172,7 +172,17 @@ public class ShapeCalculator {
             }
             return sum;
         }
+
+        public double calculateArea(double width, double height){
+            return width * height;
+        }
+
+        public double calculateArea(double radius){
+            return Math.PI * radius * radius;
+        }
     }
+
+
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -206,6 +216,9 @@ public class ShapeCalculator {
         System.out.println("add(5.3, 3.2) = " + calc.add(5.3, 3.2));
         System.out.println("add(8, 5, 9) = " + calc.add(8, 5, 9));
         System.out.println("add(1,2,3,4,5,6) = " + calc.add(1,2,3,4,5,6)); //varargs
+
+        System.out.println("calculateArea(5.3, 3.5) = " + calc.calculateArea(5.3, 3.5));
+        System.out.println("calculateArea(4.5) =" + calc.calculateArea(4.5));
 
 
     }
