@@ -164,6 +164,7 @@ public class ShapeCalculator {
             return a + b + c;
         }
 
+        //var agrs
         public int add(int... numbers){
             int sum = 0;
             for (int num : numbers){
@@ -198,6 +199,13 @@ public class ShapeCalculator {
 
         System.out.printf("Rectangle Area: %.2f%n", shapeObject1.calculateArea());
         System.out.printf("Circle Area: %.2f%n", shapeObject2.calculateArea());
+
+        Calculator calc = new Calculator();
+
+        System.out.println("add(5, 3) = " + calc.add(5,3));
+        System.out.println("add(5.3, 3.2) = " + calc.add(5.3, 3.2));
+        System.out.println("add(8, 5, 9) = " + calc.add(8, 5, 9));
+        System.out.println("add(1,2,3,4,5,6) = " + calc.add(1,2,3,4,5,6)); //varargs
 
 
     }
